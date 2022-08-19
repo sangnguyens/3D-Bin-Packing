@@ -74,9 +74,9 @@ We then evaluated the different trained models using several different selection
 * Large flat boxes by sampling from boxes generate with 1 short edge (less than 3) and two long edges (greater than 5)
 
 To reproduce, the general evaluation command was similar to: 
-```python evaluation.py --evaluate --internal-node-holder 800  --load-model --model-path 'Path-to-saved-model/model.pt
 ```
-
+python evaluation.py --evaluate --internal-node-holder 800  --load-model --model-path 'Path-to-saved-model/model.pt
+```
 ## Group Members
 * Jongbum Lee
 * Cristina Moody

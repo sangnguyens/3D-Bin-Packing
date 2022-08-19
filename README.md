@@ -54,8 +54,7 @@ python main.py # python main.py --help (to get option)
 ```
 3. Evaluate model from pretrained model:
 ```
-python evaluation.py --evaluate --load-model --model-path 
-path/to/your/model --load-dataset --dataset-path path/to/your/dataset
+python evaluation.py --evaluate --load-model --model-path path/to/your/model --load-dataset --dataset-path path/to/your/dataset
 ```
 ## Rendering
 run evaluation.py and come to `nb` folder run notebook to see how agent 

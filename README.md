@@ -1,5 +1,6 @@
 # 3D-Bin-Packing Project
-This project is a 3D Packing Optimization project under mentorship of InstaDeep. The source code of this repository can be found at [Hang Zhao](https://github.com/alexfrom0815) The ultimate goal is to pack a Unit Load Device [Unit Load Device Description](https://en.wikipedia.org/wiki/Unit_load_device)
+This project is a 3D Packing Optimization project under mentorship of 
+InstaDeep. The source code of this repository can be found at [Hang Zhao](https://github.com/alexfrom0815). The ultimate goal is to pack a Unit Load Device [Unit Load Device Description](https://en.wikipedia.org/wiki/Unit_load_device)
 
 
 <p style="text-align: center;"><img src="https://upload.wikimedia.org/wikipedia/commons/8/81/Unit_load_device_sizes.png" height="99" width="136.5" > 

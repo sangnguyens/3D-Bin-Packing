@@ -1,4 +1,4 @@
-# 3D-Packing Project
+# 3D-Bin-Packing Project
 This project is a 3D Packing Optimization project in partnership with InstaDeep. The ultimate goal is to pack a Unit Load Device [Unit Load Device Description](https://en.wikipedia.org/wiki/Unit_load_device)
 
 
@@ -41,7 +41,31 @@ This is the repository of 3D Packing capstone project designed to productionize 
   * [Env2D.ipynb](https://github.com/seive76/3D-Packing/blob/main/nb/Env2D.ipynb)
 * We're working with code from [Hang Zhao](https://github.com/alexfrom0815)
 
-### 
+## How to get it work
+1. Prepare environment
+```
+git clone git@github.com:sangnguyens/3D-Bin-Packing.git
+cd 3D-Bin-Packing
+conda env create --file packing_env.yml
+```
+2. Train model:
+```
+python main.py # python main.py --help (to get option)
+```
+3. Evaluate model from pretrained model:
+```
+python evaluation.py --evaluate --load-model --model-path 
+path/to/your/model --load-dataset --dataset-path path/to/your/dataset
+```
+## Rendering
+run evaluation.py and come to `nb` folder run notebook to see how agent 
+packs and places boxes.
+
+### Help
+```
+python main.py -h
+python evaluation.py -h
+```
 
 ### Experiment Code From alexfrom0815
 * [Online-3D-BPP-DRL](https://github.com/alexfrom0815/Online-3D-BPP-DRL)

@@ -14,31 +14,6 @@ Specific dimensions for several [Unit Load Devices](https://freight.qantas.com/f
 Is it possible to pack shipping containers more efficiently? Save space, save time, save money - pack efficiently.
 Packing efficiently has the potential to reduce shipping costs that have increased due to the increase in fuel costs, shipping containers, trucks, and shipping bottlenecks.
 
-For our experiments we trained the RL agents for **35,000** updates and updated and saved the model every **1,000** updates.
-We used the following parameters to train our agent:
-* Trained for a total of 35,000 updates.
-* Updated and saved the model every 1,000 updates using flags `--model-save-interval 1000 --model-update-interval 1000`.
-* Generated data that sampled boxs with edge lengths varying from 1 to 5 using the file `givenData.py` by editing the `lower` and `higher` edges of `item_size_set`.
-* Trained using a bin size of either 10x10x10 or 20x10x10 by editing the `container_size` in `givenData.py`.
-* A random seed of 42 with the flag `--seed 42`.
-* Set the `internal node holder` to `800` to prevent the model from exiting training early with the flag `--set internal-node-holder 800`.
-* Used an either __A2C__ or __acktr__ reinforcement learning agent using the flag `-use-acktr USE_ACKTR` to select the acktr agent as the A2C agent is used by default.
-
-To reproduce, the general run command was similar to:
-```
-python main.py --seed 42 --internal-node-holder 800 --use-acktr USE_ACKTR --model-update-interval 1000  --model-save-interval 1000
-```
-
-We then evaluated the different trained models using several different selections of boxes by editing `givenData.py`:
-* Uniform 2x2x2 cubes.
-* The same generated data sampling.
-* Long skinny boxes by sampling from boxes generated with 2 short edges (less than 3) and one long edge (greater than 5)
-* Large flat boxes by sampling from boxes generate with 1 short edge (less than 3) and two long edges (greater than 5)
-
-To reproduce, the general evaluation command was similar to: 
-```python evaluation.py --evaluate --internal-node-holder 800  --load-model --model-path 'Path-to-saved-model/model.pt
-```
-
 ## Scope
 Open-ended research questions:
 * Which package do I pick next and how do I set the order of items before placing/packing?
@@ -67,13 +42,39 @@ python main.py
 python evaluation.py
 ```
 ## Rendering
-run evaluation.py and come to `nb` folder run notebook to see how agent 
+Run evaluation.py and come to `nb` folder run `notebook` to see how agent 
 packs and places boxes.
 
 ## Help
 ```
 python main.py -h
 python evaluation.py -h
+```
+
+## Our Experiments
+For our experiments we trained the RL agents for **35,000** updates and updated and saved the model every **1,000** updates.
+We used the following parameters to train our agent:
+* Trained for a total of 35,000 updates.
+* Updated and saved the model every 1,000 updates using flags `--model-save-interval 1000 --model-update-interval 1000`.
+* Generated data that sampled boxs with edge lengths varying from 1 to 5 using the file `givenData.py` by editing the `lower` and `higher` edges of `item_size_set`.
+* Trained using a bin size of either 10x10x10 or 20x10x10 by editing the `container_size` in `givenData.py`.
+* A random seed of 42 with the flag `--seed 42`.
+* Set the `internal node holder` to `800` to prevent the model from exiting training early with the flag `--set internal-node-holder 800`.
+* Used an either __A2C__ or __acktr__ reinforcement learning agent using the flag `-use-acktr USE_ACKTR` to select the acktr agent as the A2C agent is used by default.
+
+To reproduce, the general run command was similar to:
+```
+python main.py --seed 42 --internal-node-holder 800 --use-acktr USE_ACKTR --model-update-interval 1000  --model-save-interval 1000
+```
+
+We then evaluated the different trained models using several different selections of boxes by editing `givenData.py`:
+* Uniform 2x2x2 cubes.
+* The same generated data sampling.
+* Long skinny boxes by sampling from boxes generated with 2 short edges (less than 3) and one long edge (greater than 5)
+* Large flat boxes by sampling from boxes generate with 1 short edge (less than 3) and two long edges (greater than 5)
+
+To reproduce, the general evaluation command was similar to: 
+```python evaluation.py --evaluate --internal-node-holder 800  --load-model --model-path 'Path-to-saved-model/model.pt
 ```
 
 ## Group Members

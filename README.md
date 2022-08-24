@@ -82,3 +82,16 @@ python evaluation.py --evaluate --internal-node-holder 800  --load-model --model
 * Cristina Moody
 * Sang Nguyen
 
+
+## Crediting
+Hang Zhao paper
+```
+@inproceedings{
+zhao2022learning,
+title={Learning Efficient Online 3D Bin Packing on Packing Configuration Trees},
+author={Hang Zhao and Yang Yu and Kai Xu},
+booktitle={International Conference on Learning Representations},
+year={2022},
+url={https://openreview.net/forum?id=bfuGjlCwAq}
+}
+```

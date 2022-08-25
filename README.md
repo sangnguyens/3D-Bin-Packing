@@ -42,7 +42,7 @@ python main.py
 python evaluation.py
 ```
 ## Rendering
-Run evaluation.py and come to `nb` folder run `notebook` to see how agent 
+Run evaluation.py and come to `nb` folder run `BinRenderingCode.ipynb` to see how agent 
 packs and places boxes.
 
 ## Help
